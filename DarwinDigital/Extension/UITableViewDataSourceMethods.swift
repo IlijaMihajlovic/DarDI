@@ -13,7 +13,7 @@ import UIKit
 extension HomeController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return testsArray.count
+        return incomingDataArray.count
     }
     
     
@@ -21,6 +21,24 @@ extension HomeController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CustomCell
         
+        let incomingJSONData = incomingDataArray[indexPath.row]
+        
+        cell.address.text = incomingJSONData.address.city
+        cell.companyName.text = incomingJSONData.company.name
+        cell.username.text = incomingJSONData.username
+        
+        if let imageURL = URL(string: incomingJSONData.avatar) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.avatar.image = image
+                    }
+                }
+            }
+        }
         
         return cell
     }

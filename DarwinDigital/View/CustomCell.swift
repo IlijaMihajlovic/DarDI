@@ -13,14 +13,13 @@ class CustomCell: UITableViewCell {
     let bubbleBackground: UIView = {
         let bubbleView = UIView()
         bubbleView.layer.cornerRadius = 16
-        bubbleView.backgroundColor  = .blue
+        bubbleView.backgroundColor  = .white
         bubbleView.translatesAutoresizingMaskIntoConstraints = false
         return bubbleView
     }()
     
     let address: UILabel = {
         let label = UILabel()
-        label.text = "Adress"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,6 @@ class CustomCell: UITableViewCell {
     
     let companyName: UILabel = {
         let label = UILabel()
-        label.text = "Company Name"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +36,6 @@ class CustomCell: UITableViewCell {
     
     let username: UILabel = {
         let label = UILabel()
-        label.text = "UserName"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +45,7 @@ class CustomCell: UITableViewCell {
     let avatar: UIImageView = {
         let avatarImage = UIImageView()
         avatarImage.setRadius(radius: 14)
-        avatarImage.backgroundColor = .red
+        //avatarImage.backgroundColor = .red
         avatarImage.contentMode = .scaleAspectFit
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         return avatarImage
@@ -56,6 +53,7 @@ class CustomCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .clear
         addViewToSubView()
         addConstraints()
     }
