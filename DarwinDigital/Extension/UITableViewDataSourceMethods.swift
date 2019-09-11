@@ -8,7 +8,7 @@
 
 import UIKit
 
-//MARK: - UITableView Data Source Methods
+//MARK: - UITableView Data Source Methods With a Custom Function
 
 extension HomeController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,53 +23,42 @@ extension HomeController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+   
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CustomCell
-        
-        let incomingJSONData = incomingDataArray[indexPath.row]
-        
-        
+ 
         if isSearching {
-            cell.address.text = filterdArray[indexPath.row].address.city
-            cell.companyName.text = filterdArray[indexPath.row].company.name
-            cell.username.text =  filterdArray[indexPath.row].username
-            
-            if let imageURL = URL(string: filterdArray[indexPath.row].avatar) {
-                DispatchQueue.global().async {
-                    let data = try? Data(contentsOf: imageURL)
-                    
-                    if let data = data {
-                        let image = UIImage(data: data)
-                        DispatchQueue.main.async {
-                            cell.avatar.image = image
-                        }
-                    }
-                }
-            }
+            searchBarIsSeraching(with: filterdArray, and: cell, atIndexPath: indexPath)
             
         } else {
             
-            cell.address.text = incomingJSONData.address.city
-            cell.companyName.text = incomingJSONData.company.name
-            cell.username.text = incomingJSONData.username
-            
-            if let imageURL = URL(string: incomingJSONData.avatar) {
-                DispatchQueue.global().async {
-                    let data = try? Data(contentsOf: imageURL)
-                    
-                    if let data = data {
-                        let image = UIImage(data: data)
-                        DispatchQueue.main.async {
-                            cell.avatar.image = image
-                        }
-                    }
-                }
-            }
-            
+            searchBarIsSeraching(with: incomingDataArray, and: cell, atIndexPath: indexPath)
         }
-        
         
         return cell
     }
+    
+
+    
+    //Custom Function
+    func searchBarIsSeraching(with modelData: [JSONModelData], and cell: CustomCell, atIndexPath: IndexPath) {
+        
+        cell.address.text = modelData[atIndexPath.row].address.city
+        cell.companyName.text = modelData[atIndexPath.row].company.name
+        cell.username.text = modelData[atIndexPath.row].username
+        
+        if let imageURL = URL(string: modelData[atIndexPath.row].avatar) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.avatar.image = image
+                    }
+                }
+            }
+        }
+    }
+  
 }
 

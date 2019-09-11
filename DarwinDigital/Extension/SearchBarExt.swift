@@ -10,7 +10,6 @@ import UIKit
 
 extension HomeController: UISearchBarDelegate{
     
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         showSearchBar(shouldShow: false)
         searchBar.text = ""
@@ -20,11 +19,11 @@ extension HomeController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text != "" {
-        
+            
             // Enable search with lowercase and uppercase letters
             filterdArray = incomingDataArray.filter({$0.username.lowercased().uppercased().prefix(searchText.count) == searchText.lowercased().uppercased()})
         }
-
+        
         isSearching = true
         animateTableViewWhileReloading()
     }

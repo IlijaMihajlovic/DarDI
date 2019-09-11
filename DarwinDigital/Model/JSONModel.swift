@@ -8,74 +8,37 @@
 
 import Foundation
 
-//struct ResponseData: Decodable {
-//    let person: [JSONData]
-//}
-
-//struct JSONData: Decodable {
-//    let id: Int
-//    let name: String
-//    let username: String
-//    let email: String
-//    let adress: Adress
-//    let avatar: String
-//    let phone: String
-//    let website: String
-//    let company: Company
-//}
-//
-//struct Adress: Decodable {
-//    let street: String
-//    let suite: String
-//    let city: String
-//    let zipcode: String
-//    let geo: Geo
-//}
-//
-//struct Geo: Decodable {
-//    let lat: String
-//    let lng: String
-//}
-//
-//struct Company: Decodable {
-//    let name: String
-//    let catchPhrase: String
-//    let bs: String
-//}
-
-
-
-struct JSONData: Codable {
+struct JSONModelData: Decodable {
     let id: Int
-    let name, username, email: String
+    let name: String
+    let username: String
+    let email: String
     let address: Address
     let avatar: String
-    let phone, website: String
+    let phone: String
+    let website: String
     let company: Company
 }
 
 // MARK: - Address
-struct Address: Codable {
-    let street, suite, city, zipcode: String
+struct Address: Decodable {
+    let street: String
+    let suite: String
+    let city: String
+    let zipcode: String
     let geo: Geo
 }
 
-// MARK: - Geo
-struct Geo: Codable {
-    let lat, lng: String
+// MARK:- Geo
+struct Geo: Decodable {
+    let lat: String
+    let lng: String
 }
 
 // MARK: - Company
-struct Company: Codable {
-    let name, catchPhrase, bs: String
+struct Company: Decodable {
+    let name: String
+    let catchPhrase: String
+    let bs: String
 }
 
-
-//struct JSONData: Decodable {
-//
-//    var userId: Int
-//    var id: Int
-//    var title: String
-//    var body: String
-//
-//}
