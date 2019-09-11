@@ -20,16 +20,11 @@ extension HomeController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text != "" {
-           // searchCountry = //incomingDataArray.filter({$0.lowercased().uppercased().prefix(searchText.count) == searchText.lowercased().uppercased()})
-            
-          
-            
-            
+        
+            // Enable search with lowercase and uppercase letters
+            filterdArray = incomingDataArray.filter({$0.username.lowercased().uppercased().prefix(searchText.count) == searchText.lowercased().uppercased()})
         }
-        
-        
-        
-        
+
         isSearching = true
         animateTableViewWhileReloading()
     }

@@ -13,24 +13,49 @@ class HomeController: UITableViewController {
     var incomingDataArray: [JSONData] = []
     let cellId = "cellId"
    
-    let searchBar = UISearchBar()
-    var filterdArray  = [String]()
+    //let searchBar = UISearchBar()
+    var filterdArray  = [JSONData]()
     var isSearching = false
-
+    
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        return searchBar
+    }()
+    
+    lazy var sortBarButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Sort", for: .normal)
+        button.addTarget(self, action: #selector(sortTableViewbyUsername), for: .touchUpInside)
+        button.frame = CGRect(x: 1, y: 0, width: 35, height: 35)
+        return button
+    }()
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         showSearchBarButtonItem(shouldShow: true)
-        
+        addBarrButtonItem()
         
         getJSONData()
   }
+    
+    @objc func sortTableViewbyUsername() {
+        incomingDataArray.sort { $0.username < $1.username } // sort ascending by username
+        tableView.reloadData()
+    }
+    
+    fileprivate func addBarrButtonItem() {
+       navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sortBarButton)
+    }
     
     @objc func handleShowSearch() {
         showSearchBar(shouldShow: true)
         searchBar.becomeFirstResponder()
         searchBar.delegate = self
     }
+ 
     
     func showSearchBarButtonItem(shouldShow: Bool) {
         
@@ -47,14 +72,6 @@ class HomeController: UITableViewController {
         showSearchBarButtonItem(shouldShow: !shouldShow)
         searchBar.showsCancelButton = shouldShow
         navigationItem.titleView = shouldShow ? searchBar: nil
-        
-        //Longer version
-        //        if shouldShow == true {
-        //            navigationItem.titleView = searchBar
-        //        } else {
-        //            navigationItem.titleView = nil
-        //        }
-        
     }
     
     fileprivate func setupTableView() {
@@ -63,6 +80,8 @@ class HomeController: UITableViewController {
         tableView.register(CustomCell.self, forCellReuseIdentifier: cellId)
     }
     
+    
+   
     
     func getJSONData() {
         //let url = "https://jsonplaceholder.typicode.com/posts"

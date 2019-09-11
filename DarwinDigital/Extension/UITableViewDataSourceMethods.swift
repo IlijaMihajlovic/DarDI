@@ -13,7 +13,12 @@ import UIKit
 extension HomeController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return incomingDataArray.count
+        if isSearching {
+            return filterdArray.count
+        
+        } else {
+            return incomingDataArray.count
+        }
     }
     
     
@@ -23,22 +28,46 @@ extension HomeController {
         
         let incomingJSONData = incomingDataArray[indexPath.row]
         
-        cell.address.text = incomingJSONData.address.city
-        cell.companyName.text = incomingJSONData.company.name
-        cell.username.text = incomingJSONData.username
         
-        if let imageURL = URL(string: incomingJSONData.avatar) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        cell.avatar.image = image
+        if isSearching {
+            cell.address.text = filterdArray[indexPath.row].address.city
+            cell.companyName.text = filterdArray[indexPath.row].company.name
+            cell.username.text =  filterdArray[indexPath.row].username
+            
+            if let imageURL = URL(string: filterdArray[indexPath.row].avatar) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: imageURL)
+                    
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            cell.avatar.image = image
+                        }
                     }
                 }
             }
+            
+        } else {
+            
+            cell.address.text = incomingJSONData.address.city
+            cell.companyName.text = incomingJSONData.company.name
+            cell.username.text = incomingJSONData.username
+            
+            if let imageURL = URL(string: incomingJSONData.avatar) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: imageURL)
+                    
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            cell.avatar.image = image
+                        }
+                    }
+                }
+            }
+            
         }
+        
         
         return cell
     }
