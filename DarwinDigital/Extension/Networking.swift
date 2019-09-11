@@ -11,7 +11,7 @@ import Foundation
 extension HomeController {
     
     // MARK - Fetch JSON Data
-    func fetchJSON(url: URL, completion: @escaping (Result<[JSONData], NetworkError>) -> Void) {
+    func fetchJSON(url: URL, completion: @escaping (Result<[JSONModelData], NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             
             guard let jsonData = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 || httpResponse.statusCode == 200, error == nil else {
@@ -26,7 +26,7 @@ extension HomeController {
             
             //MARK: - Get Data Back
             do {
-                let data = try JSONDecoder().decode([JSONData].self, from: jsonData)
+                let data = try JSONDecoder().decode([JSONModelData].self, from: jsonData)
                 self.incomingDataArray = data
                 
                 completion(.success(data))

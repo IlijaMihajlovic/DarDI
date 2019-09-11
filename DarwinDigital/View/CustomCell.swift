@@ -45,8 +45,7 @@ class CustomCell: UITableViewCell {
     let avatar: UIImageView = {
         let avatarImage = UIImageView()
         avatarImage.setRadius(radius: 14)
-        //avatarImage.backgroundColor = .red
-        avatarImage.contentMode = .scaleAspectFit
+        avatarImage.contentMode = .scaleAspectFill
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         return avatarImage
     }()

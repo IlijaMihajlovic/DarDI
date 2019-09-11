@@ -1,8 +1,8 @@
 //
 //  NetworkError.swift
-//  Check24
+//  DarwinDigital
 //
-//  Created by Ilija Mihajlovic on 8/19/19.
+//  Created by Ilija Mihajlovic on 9/11/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
