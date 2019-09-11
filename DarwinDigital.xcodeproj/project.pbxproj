@@ -20,6 +20,7 @@
 		24E6D347232916E100C513B2 /* UICollectionViewDelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D346232916E100C513B2 /* UICollectionViewDelegateMethods.swift */; };
 		24E6D34923291C8B00C513B2 /* AutoLayoutAnchorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34823291C8B00C513B2 /* AutoLayoutAnchorExtension.swift */; };
 		24E6D34B2329228C00C513B2 /* SetRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34A2329228C00C513B2 /* SetRadius.swift */; };
+		24E6D34E23292A3B00C513B2 /* SearchBarExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		24E6D346232916E100C513B2 /* UICollectionViewDelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewDelegateMethods.swift; sourceTree = "<group>"; };
 		24E6D34823291C8B00C513B2 /* AutoLayoutAnchorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchorExtension.swift; sourceTree = "<group>"; };
 		24E6D34A2329228C00C513B2 /* SetRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRadius.swift; sourceTree = "<group>"; };
+		24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				24E6D344232916CD00C513B2 /* UITableViewDataSourceMethods.swift */,
 				24E6D346232916E100C513B2 /* UICollectionViewDelegateMethods.swift */,
 				24E6D34A2329228C00C513B2 /* SetRadius.swift */,
+				24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				24E6D3202328E7A200C513B2 /* HomeController.swift in Sources */,
 				24E6D33E2329067A00C513B2 /* Networking.swift in Sources */,
+				24E6D34E23292A3B00C513B2 /* SearchBarExt.swift in Sources */,
 				24E6D34923291C8B00C513B2 /* AutoLayoutAnchorExtension.swift in Sources */,
 				24E6D345232916CD00C513B2 /* UITableViewDataSourceMethods.swift in Sources */,
 				24E6D3392328F15600C513B2 /* JSONModel.swift in Sources */,
