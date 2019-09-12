@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeController: UITableViewController {
-    
+
     //MARK: - Propeties
     let cellId = "cellId"
    fileprivate let url = "https://api.myjson.com/bins/w0b55"
@@ -23,6 +23,7 @@ class HomeController: UITableViewController {
         searchBar.sizeToFit()
         return searchBar
     }()
+    
     
     lazy var sortBarButton: UIButton = {
         let button = UIButton(type: .system)
@@ -39,12 +40,20 @@ class HomeController: UITableViewController {
         showSearchBarButtonItem(shouldShow: true)
         addBarrButtonItem()
         checkJSONDataForPossibleErrors()
+        navigationItem.title = "Users"
   }
+    
+    
+    @objc func goToMapController() {
+        let showVC = MapController()
+        self.navigationController?.pushViewController(showVC, animated: true)
+        //present(showVC, animated: true, completion: nil)
+    }
     
     
     //MARK: - TableView
     fileprivate func setupTableView() {
-        tableView.backgroundColor = .orange
+        tableView.backgroundColor = .mainOrange
         tableView.separatorStyle = .none
         tableView.register(CustomCell.self, forCellReuseIdentifier: cellId)
     }
@@ -102,7 +111,6 @@ class HomeController: UITableViewController {
     }
 
     
-
     
 }
 
