@@ -10,13 +10,13 @@ import UIKit
 
 class HomeController: UITableViewController {
     
-    //MARK: Propeties
+    //MARK: - Propeties
     let cellId = "cellId"
    fileprivate let url = "https://api.myjson.com/bins/w0b55"
 //   fileprivate let url = "https://my-json-server.typicode.com/IlijaMihajlovic/demo/blob/master/db.json"
     var isSearching = false
-    var incomingDataArray: [JSONModelData] = []
-    var filterdArray  = [JSONModelData]()
+    var incomingDataArray = [JSONModelData]()
+    var filterdArray = [JSONModelData]()
     
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -32,7 +32,7 @@ class HomeController: UITableViewController {
         return button
     }()
     
-    //MARK: Lifecycle
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -42,21 +42,21 @@ class HomeController: UITableViewController {
   }
     
     
-    //MARK: TableView
+    //MARK: - TableView
     fileprivate func setupTableView() {
         tableView.backgroundColor = .orange
         tableView.separatorStyle = .none
         tableView.register(CustomCell.self, forCellReuseIdentifier: cellId)
     }
     
-    //MARK: Search Bar Button Function
+    //MARK: - Search Bar Button Function
     @objc func handleShowSearchBar() {
         showSearchBar(shouldShow: true)
         searchBar.becomeFirstResponder()
         searchBar.delegate = self
     }
     
-    func showSearchBarButtonItem(shouldShow: Bool) {
+    fileprivate func showSearchBarButtonItem(shouldShow: Bool) {
         if shouldShow {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(handleShowSearchBar))
         } else {
@@ -69,24 +69,22 @@ class HomeController: UITableViewController {
         showSearchBarButtonItem(shouldShow: !shouldShow)
         searchBar.showsCancelButton = shouldShow
         navigationItem.titleView = shouldShow ? searchBar: nil
-        
-        
-        
     }
     
-    //MARK: Sort Button Functions
+    
+    //MARK: - Sort Button Functions
     fileprivate func addBarrButtonItem() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sortBarButton)
     }
     
-    @objc func sortTableViewbyUsername() {
+    @objc fileprivate func sortTableViewbyUsername() {
         incomingDataArray.sort { $0.username < $1.username } //sort username by ascending
         tableView.reloadData()
     }
     
 
-    
-    func checkJSONDataForPossibleErrors() {
+    //MARK: - Check JSON Data For Possible Errors
+   fileprivate func checkJSONDataForPossibleErrors() {
         guard let urlString = URL(string: url) else { return }
         
         self.fetchJSON(url: urlString) {(result) in
