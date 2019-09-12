@@ -42,8 +42,7 @@ class HomeController: UITableViewController {
         addBarrButtonItem()
         checkJSONDataForPossibleErrors()
         navigationItem.title = "Users"
-        
-        
+
   }
     
     

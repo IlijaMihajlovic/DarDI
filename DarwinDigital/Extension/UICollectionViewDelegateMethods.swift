@@ -15,7 +15,12 @@ extension HomeController {
         let detailVC = DetailVC()
        detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
  
+        UIView.transition(with: tableView,duration:0.27,options:.transitionCrossDissolve,animations: { () -> Void in
+            
             self.navigationController?.pushViewController(detailVC, animated: true)
+        
+        }, completion: nil)
+        
   
     }
 
