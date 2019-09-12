@@ -10,10 +10,11 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
+    //MARK: - Propeties
     let bubbleBackground: UIView = {
         let bubbleView = UIView()
         bubbleView.layer.cornerRadius = 16
-        bubbleView.backgroundColor  = .white
+        bubbleView.backgroundColor =  .mainOrange
         bubbleView.translatesAutoresizingMaskIntoConstraints = false
         return bubbleView
     }()
@@ -21,6 +22,7 @@ class CustomCell: UITableViewCell {
     let address: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .white
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,6 +31,7 @@ class CustomCell: UITableViewCell {
     let companyName: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .white
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -37,6 +40,7 @@ class CustomCell: UITableViewCell {
     let username: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .white
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -50,18 +54,51 @@ class CustomCell: UITableViewCell {
         return avatarImage
     }()
     
+    let email: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let street: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let phone: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    //MARK: - Cell Initializer
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
-        addViewToSubView()
+        addViewToSubview()
         addConstraints()
     }
+    
+    func getIndexPathFor(view: UIView, tableView: UITableView) -> IndexPath? {
+        
+        let point = tableView.convert(view.bounds.origin, from: view)
+        let indexPath = tableView.indexPathForRow(at: point)
+        return indexPath
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+     //MARK: - Constraints and Add Subview Functions
     fileprivate func addConstraints() {
        bubbleBackground.anchor(top: topAnchor, bottom: bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 16, bottom: 16, right: 16))
         
@@ -74,8 +111,10 @@ class CustomCell: UITableViewCell {
         companyName.anchor(top: address.bottomAnchor, bottom: avatar.bottomAnchor, leading: avatar.trailingAnchor, trailing: bubbleBackground.trailingAnchor, padding: .init(top: 5, left: 5, bottom: 5, right: 5), size: .init(width: 0, height: 30))
     }
     
-    fileprivate func addViewToSubView() {
+    fileprivate func addViewToSubview() {
      [bubbleBackground, avatar, username, address, companyName].forEach{addSubview($0)}
     }
+    
+    
     
 }

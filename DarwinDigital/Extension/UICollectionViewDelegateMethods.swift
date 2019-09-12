@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension HomeController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = DetailVC()
+       detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
+ 
+            self.navigationController?.pushViewController(detailVC, animated: true)
+  
+    }
+
+}
 
 
 
