@@ -24,6 +24,7 @@
 		24FC06BE232A2F8900BA9C27 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06BD232A2F8900BA9C27 /* MapController.swift */; };
 		24FC06C0232A361F00BA9C27 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06BF232A361F00BA9C27 /* MainTabController.swift */; };
 		24FC06C2232A4A5600BA9C27 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06C1232A4A5600BA9C27 /* CustomColor.swift */; };
+		24FC06C4232A66B000BA9C27 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06C3232A66B000BA9C27 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		24FC06BD232A2F8900BA9C27 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		24FC06BF232A361F00BA9C27 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		24FC06C1232A4A5600BA9C27 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		24FC06C3232A66B000BA9C27 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				24FC06BD232A2F8900BA9C27 /* MapController.swift */,
 				24E6D31D2328E7A200C513B2 /* AppDelegate.swift */,
 				24FC06BF232A361F00BA9C27 /* MainTabController.swift */,
+				24FC06C3232A66B000BA9C27 /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				24E6D34B2329228C00C513B2 /* SetRadiusExt.swift in Sources */,
 				24E6D3432329069B00C513B2 /* NetworkError.swift in Sources */,
 				24E6D3362328F0F500C513B2 /* CustomCell.swift in Sources */,
+				24FC06C4232A66B000BA9C27 /* DetailVC.swift in Sources */,
 				24E6D31E2328E7A200C513B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

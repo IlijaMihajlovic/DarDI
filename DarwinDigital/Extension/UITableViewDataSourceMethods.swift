@@ -37,14 +37,17 @@ extension HomeController {
         return cell
     }
     
-    
-    
-    //Custom Function
+
+    //TODO: - Potential for using generics
     func searchBarIsSeraching(with modelData: [JSONModelData], and cell: CustomCell, atIndexPath: IndexPath) {
         
         cell.address.text = modelData[atIndexPath.row].address.city
         cell.companyName.text = modelData[atIndexPath.row].company.name
         cell.username.text = modelData[atIndexPath.row].username
+        
+        cell.email.text = modelData[atIndexPath.row].email
+        cell.street.text = modelData[atIndexPath.row].address.street
+        cell.phone.text = modelData[atIndexPath.row].phone
         
         if let imageURL = URL(string: modelData[atIndexPath.row].avatar) {
             DispatchQueue.global().async {

@@ -11,6 +11,7 @@ import UIKit
 class HomeController: UITableViewController {
 
     //MARK: - Propeties
+    
     let cellId = "cellId"
    fileprivate let url = "https://api.myjson.com/bins/w0b55"
 //   fileprivate let url = "https://my-json-server.typicode.com/IlijaMihajlovic/demo/blob/master/db.json"
@@ -41,6 +42,8 @@ class HomeController: UITableViewController {
         addBarrButtonItem()
         checkJSONDataForPossibleErrors()
         navigationItem.title = "Users"
+        
+        
   }
     
     
@@ -53,7 +56,8 @@ class HomeController: UITableViewController {
     
     //MARK: - TableView
     fileprivate func setupTableView() {
-        tableView.backgroundColor = .mainOrange
+        //tableView.backgroundColor = .mainOrange
+        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.register(CustomCell.self, forCellReuseIdentifier: cellId)
     }
@@ -109,8 +113,8 @@ class HomeController: UITableViewController {
             }
         }
     }
-
     
+ 
     
 }
 

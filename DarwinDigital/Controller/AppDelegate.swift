@@ -21,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         //window?.rootViewController = UINavigationController(rootViewController: HomeController())
         let vc = MainTabController()
+      
         window?.rootViewController = vc
         
+        UINavigationBar.appearance().barTintColor = .mainOrange
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
         return true
     }
