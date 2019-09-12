@@ -15,7 +15,7 @@ extension HomeController {
         
         if isSearching {
             return filterdArray.count
-        
+            
         } else {
             return incomingDataArray.count
         }
@@ -23,9 +23,9 @@ extension HomeController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CustomCell
- 
+        
         if isSearching {
             searchBarIsSeraching(with: filterdArray, and: cell, atIndexPath: indexPath)
             
@@ -37,7 +37,7 @@ extension HomeController {
         return cell
     }
     
-
+    
     
     //Custom Function
     func searchBarIsSeraching(with modelData: [JSONModelData], and cell: CustomCell, atIndexPath: IndexPath) {
@@ -59,6 +59,6 @@ extension HomeController {
             }
         }
     }
-  
+    
 }
 

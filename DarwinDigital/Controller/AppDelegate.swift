@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Construct our TableView programmatically
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController())
+        //window?.rootViewController = UINavigationController(rootViewController: HomeController())
+        let vc = MainTabController()
+        window?.rootViewController = vc
+        
         
         return true
     }

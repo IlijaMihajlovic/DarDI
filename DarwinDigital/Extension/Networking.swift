@@ -10,7 +10,7 @@ import Foundation
 
 extension HomeController {
     
-    // MARK - Fetch JSON Data
+    //MARK: Fetch JSON Data
     func fetchJSON(url: URL, completion: @escaping (Result<[JSONModelData], NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             
@@ -24,14 +24,13 @@ extension HomeController {
                 return
             }
             
-            //MARK: - Get Data Back
+            //MARK: Get Data Back
             do {
                 let data = try JSONDecoder().decode([JSONModelData].self, from: jsonData)
                 self.incomingDataArray = data
                 
                 completion(.success(data))
                 //print(data)
-                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
