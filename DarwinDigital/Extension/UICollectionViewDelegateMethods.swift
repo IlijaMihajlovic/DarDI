@@ -13,7 +13,7 @@ extension HomeController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailVC = DetailVC()
-       detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
+        detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
  
         UIView.transition(with: tableView,duration:0.27,options:.transitionCrossDissolve,animations: { () -> Void in
             
