@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24DA1E6A232C0365003A5EA6 /* JSONGeoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */; };
+		24DA1E6C232C34AE003A5EA6 /* MapControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */; };
 		24E6D31E2328E7A200C513B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D31D2328E7A200C513B2 /* AppDelegate.swift */; };
 		24E6D3202328E7A200C513B2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D31F2328E7A200C513B2 /* HomeController.swift */; };
 		24E6D3252328E7A300C513B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E6D3242328E7A300C513B2 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONGeoModelData.swift; sourceTree = "<group>"; };
+		24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapControllerExt.swift; sourceTree = "<group>"; };
 		24E6D31A2328E7A200C513B2 /* DarwinDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E6D31D2328E7A200C513B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E6D31F2328E7A200C513B2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				24E6D346232916E100C513B2 /* UICollectionViewDelegateMethods.swift */,
 				24E6D34A2329228C00C513B2 /* SetRadiusExt.swift */,
 				24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */,
+				24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */,
 				24FC06C1232A4A5600BA9C27 /* CustomColor.swift */,
 			);
 			path = Extension;
@@ -255,6 +258,7 @@
 				24E6D34B2329228C00C513B2 /* SetRadiusExt.swift in Sources */,
 				24E6D3432329069B00C513B2 /* NetworkError.swift in Sources */,
 				24E6D3362328F0F500C513B2 /* CustomCell.swift in Sources */,
+				24DA1E6C232C34AE003A5EA6 /* MapControllerExt.swift in Sources */,
 				24FC06C4232A66B000BA9C27 /* DetailVC.swift in Sources */,
 				24E6D31E2328E7A200C513B2 /* AppDelegate.swift in Sources */,
 			);

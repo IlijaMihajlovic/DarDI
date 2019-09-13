@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapController: UIViewController, MKMapViewDelegate {
+class MapController: UIViewController {
     
     var mapView: MKMapView!
     
@@ -56,16 +56,6 @@ class MapController: UIViewController, MKMapViewDelegate {
         view.addSubview(mapView)
         mapView.frame = view.frame
     }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(view.annotation!.title as Any)
-       let detail = DetailVC()
-        //guard let annotation = view.annotation else { return }
-        self.navigationController?.pushViewController(detail, animated: true)
-        
-        
-    }
-    
 }
 
 
