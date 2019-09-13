@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DA1E6A232C0365003A5EA6 /* JSONGeoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */; };
 		24E6D31E2328E7A200C513B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D31D2328E7A200C513B2 /* AppDelegate.swift */; };
 		24E6D3202328E7A200C513B2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D31F2328E7A200C513B2 /* HomeController.swift */; };
 		24E6D3252328E7A300C513B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E6D3242328E7A300C513B2 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONGeoModelData.swift; sourceTree = "<group>"; };
 		24E6D31A2328E7A200C513B2 /* DarwinDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E6D31D2328E7A200C513B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E6D31F2328E7A200C513B2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 				24E6D31F2328E7A200C513B2 /* HomeController.swift */,
 				24FC06BD232A2F8900BA9C27 /* MapController.swift */,
 				24E6D31D2328E7A200C513B2 /* AppDelegate.swift */,
-				24FC06BF232A361F00BA9C27 /* MainTabController.swift */,
 				24FC06C3232A66B000BA9C27 /* DetailVC.swift */,
+				24FC06BF232A361F00BA9C27 /* MainTabController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 		24E6D3372328F12E00C513B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */,
 				24E6D3382328F15600C513B2 /* JSONModel.swift */,
 			);
 			path = Model;
@@ -246,6 +249,7 @@
 				24E6D345232916CD00C513B2 /* UITableViewDataSourceMethods.swift in Sources */,
 				24FC06C0232A361F00BA9C27 /* MainTabController.swift in Sources */,
 				24E6D3392328F15600C513B2 /* JSONModel.swift in Sources */,
+				24DA1E6A232C0365003A5EA6 /* JSONGeoModelData.swift in Sources */,
 				24FC06C2232A4A5600BA9C27 /* CustomColor.swift in Sources */,
 				24E6D347232916E100C513B2 /* UICollectionViewDelegateMethods.swift in Sources */,
 				24E6D34B2329228C00C513B2 /* SetRadiusExt.swift in Sources */,

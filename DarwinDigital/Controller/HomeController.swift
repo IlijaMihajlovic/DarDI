@@ -11,9 +11,9 @@ import UIKit
 class HomeController: UITableViewController {
 
     //MARK: - Propeties
-    
+    static let shared = HomeController()
     let cellId = "cellId"
-   fileprivate let url = "https://api.myjson.com/bins/w0b55"
+    let url = "https://api.myjson.com/bins/w0b55"
 //   fileprivate let url = "https://my-json-server.typicode.com/IlijaMihajlovic/demo/blob/master/db.json"
     var isSearching = false
     var incomingDataArray = [JSONModelData]()
