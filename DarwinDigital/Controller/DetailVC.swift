@@ -1,5 +1,5 @@
 //
-//  DetailController.swift
+//  DetailVC.swift
 //  DarwinDigital
 //
 //  Created by Ilija Mihajlovic on 9/12/19.
