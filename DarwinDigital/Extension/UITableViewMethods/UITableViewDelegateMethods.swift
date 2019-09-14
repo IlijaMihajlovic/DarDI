@@ -1,5 +1,5 @@
 //
-//  UICollectionViewDelegateMethods.swift
+//  UITableViewDelegateMethods.swift
 //  DarwinDigital
 //
 //  Created by Ilija Mihajlovic on 9/11/19.
@@ -10,8 +10,9 @@ import UIKit
 
 extension HomeController {
     
+    //MARK: - UITableView Delegate Method
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let detailVC = DetailVC()
         detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
  

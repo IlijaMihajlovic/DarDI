@@ -1,5 +1,5 @@
 //
-//  MainTabController.swift
+//  MainTabBarController.swift
 //  DarwinDigital
 //
 //  Created by Ilija Mihajlovic on 9/12/19.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-class MainTabController: UITabBarController {
+class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +17,16 @@ class MainTabController: UITabBarController {
     
     
     fileprivate func setupControllers() {
-        
         tabBar.unselectedItemTintColor = .gray
         tabBar.tintColor = .mainOrange
         
-        let home = HomeController()
-        let homeNavigationController = UINavigationController(rootViewController: home)
+        let homeController = HomeController()
+        let homeNavigationController = UINavigationController(rootViewController: homeController)
         homeNavigationController.tabBarItem.image = UIImage(named: "userList")?.withRenderingMode(.alwaysTemplate)
         homeNavigationController.tabBarItem.selectedImage = UIImage(named: "userList")?.withRenderingMode(.alwaysTemplate)
         
-        let map = MapController()
-        let mapNavigationController = UINavigationController(rootViewController: map)
+        let mapController = MapController()
+        let mapNavigationController = UINavigationController(rootViewController: mapController)
         mapNavigationController.tabBarItem.image = UIImage(named: "map")?.withRenderingMode(.alwaysTemplate)
         mapNavigationController.tabBarItem.selectedImage = UIImage(named: "map")?.withRenderingMode(.alwaysTemplate)
         

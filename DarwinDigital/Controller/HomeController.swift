@@ -12,10 +12,10 @@ class HomeController: UITableViewController {
 
     //MARK: - Propeties
     static let shared = HomeController()
+    var isSearching = false
     let cellId = "cellId"
     let url = "https://api.myjson.com/bins/w0b55"
-//   fileprivate let url = "https://my-json-server.typicode.com/IlijaMihajlovic/demo/blob/master/db.json"
-    var isSearching = false
+    
     var incomingDataArray = [JSONModelData]()
     var filterdArray = [JSONModelData]()
     
@@ -42,14 +42,12 @@ class HomeController: UITableViewController {
         addBarrButtonItem()
         checkJSONDataForPossibleErrors()
         navigationItem.title = "Users"
-
   }
     
     
     @objc func goToMapController() {
         let showVC = MapController()
         self.navigationController?.pushViewController(showVC, animated: true)
-        //present(showVC, animated: true, completion: nil)
     }
     
     

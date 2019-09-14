@@ -16,13 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //Construct our TableView programmatically
+        let mainTabBarVC = MainTabBarController()
         window = UIWindow()
         window?.makeKeyAndVisible()
-        //window?.rootViewController = UINavigationController(rootViewController: HomeController())
-        let vc = MainTabController()
-      
-        window?.rootViewController = vc
+        window?.rootViewController = mainTabBarVC
         
         UINavigationBar.appearance().barTintColor = .mainOrange
         UINavigationBar.appearance().tintColor = UIColor.white

@@ -29,7 +29,6 @@ extension HomeController: UISearchBarDelegate{
     }
     
     
-    
     fileprivate func animateTableViewWhileReloading() {
         UIView.transition(with: tableView,duration:0.27,options:.transitionCrossDissolve,animations: { () -> Void in
             DispatchQueue.main.async {

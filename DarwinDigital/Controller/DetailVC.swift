@@ -8,53 +8,18 @@
 
 import UIKit
 
-
-
 class DetailVC: UIViewController {
     
     //Singleton
     static let shared = DetailVC()
     
      //MARK: - Propeties
-    
     let mainView: UIView = {
         let showV = UIView()
         showV.setRadius(radius: 14)
         showV.backgroundColor = .white
         showV.translatesAutoresizingMaskIntoConstraints = false
         return showV
-    }()
-    
-    let username: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let street: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let city: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let phone: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
     }()
     
     let avatar: UIImageView = {

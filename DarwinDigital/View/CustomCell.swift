@@ -86,12 +86,12 @@ class CustomCell: UITableViewCell {
         addConstraints()
     }
     
-    func getIndexPathFor(view: UIView, tableView: UITableView) -> IndexPath? {
-        
-        let point = tableView.convert(view.bounds.origin, from: view)
-        let indexPath = tableView.indexPathForRow(at: point)
-        return indexPath
-    }
+//    func getIndexPathFor(view: UIView, tableView: UITableView) -> IndexPath? {
+//
+//        let point = tableView.convert(view.bounds.origin, from: view)
+//        let indexPath = tableView.indexPathForRow(at: point)
+//        return indexPath
+//    }
     
     
     required init?(coder aDecoder: NSCoder) {
