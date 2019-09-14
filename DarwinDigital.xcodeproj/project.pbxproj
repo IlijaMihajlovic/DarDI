@@ -23,11 +23,22 @@
 		24E6D34923291C8B00C513B2 /* AutoLayoutAnchorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34823291C8B00C513B2 /* AutoLayoutAnchorExtension.swift */; };
 		24E6D34B2329228C00C513B2 /* SetRadiusExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34A2329228C00C513B2 /* SetRadiusExt.swift */; };
 		24E6D34E23292A3B00C513B2 /* SearchBarExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */; };
+		24F2AF9D232CE68B00C0883E /* DarwinDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2AF9C232CE68B00C0883E /* DarwinDigitalTests.swift */; };
 		24FC06BE232A2F8900BA9C27 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06BD232A2F8900BA9C27 /* MapController.swift */; };
 		24FC06C0232A361F00BA9C27 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06BF232A361F00BA9C27 /* MainTabBarController.swift */; };
 		24FC06C2232A4A5600BA9C27 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06C1232A4A5600BA9C27 /* CustomColor.swift */; };
 		24FC06C4232A66B000BA9C27 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC06C3232A66B000BA9C27 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24F2AF9F232CE68B00C0883E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24E6D3122328E7A200C513B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24E6D3192328E7A200C513B2;
+			remoteInfo = DarwinDigital;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONGeoModelData.swift; sourceTree = "<group>"; };
@@ -48,6 +59,9 @@
 		24E6D34823291C8B00C513B2 /* AutoLayoutAnchorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchorExtension.swift; sourceTree = "<group>"; };
 		24E6D34A2329228C00C513B2 /* SetRadiusExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRadiusExt.swift; sourceTree = "<group>"; };
 		24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExt.swift; sourceTree = "<group>"; };
+		24F2AF9A232CE68B00C0883E /* DarwinDigitalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarwinDigitalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F2AF9C232CE68B00C0883E /* DarwinDigitalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinDigitalTests.swift; sourceTree = "<group>"; };
+		24F2AF9E232CE68B00C0883E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24FC06BD232A2F8900BA9C27 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		24FC06BF232A361F00BA9C27 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		24FC06C1232A4A5600BA9C27 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24F2AF97232CE68B00C0883E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				24E6D31C2328E7A200C513B2 /* DarwinDigital */,
+				24F2AF9B232CE68B00C0883E /* DarwinDigitalTests */,
 				24E6D31B2328E7A200C513B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				24E6D31A2328E7A200C513B2 /* DarwinDigital.app */,
+				24F2AF9A232CE68B00C0883E /* DarwinDigitalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +179,7 @@
 				24F2AF95232CE0C200C0883E /* Services */,
 				24F2AF94232CD5B900C0883E /* UITableViewMethods */,
 				24E6D33D2329067A00C513B2 /* Networking.swift */,
+				24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */,
 				24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */,
 			);
 			path = Extension;
@@ -182,11 +206,19 @@
 			isa = PBXGroup;
 			children = (
 				24E6D34A2329228C00C513B2 /* SetRadiusExt.swift */,
-				24E6D34D23292A3B00C513B2 /* SearchBarExt.swift */,
 				24FC06C1232A4A5600BA9C27 /* CustomColor.swift */,
 				24E6D34823291C8B00C513B2 /* AutoLayoutAnchorExtension.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		24F2AF9B232CE68B00C0883E /* DarwinDigitalTests */ = {
+			isa = PBXGroup;
+			children = (
+				24F2AF9C232CE68B00C0883E /* DarwinDigitalTests.swift */,
+				24F2AF9E232CE68B00C0883E /* Info.plist */,
+			);
+			path = DarwinDigitalTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +241,24 @@
 			productReference = 24E6D31A2328E7A200C513B2 /* DarwinDigital.app */;
 			productType = "com.apple.product-type.application";
 		};
+		24F2AF99232CE68B00C0883E /* DarwinDigitalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F2AFA3232CE68B00C0883E /* Build configuration list for PBXNativeTarget "DarwinDigitalTests" */;
+			buildPhases = (
+				24F2AF96232CE68B00C0883E /* Sources */,
+				24F2AF97232CE68B00C0883E /* Frameworks */,
+				24F2AF98232CE68B00C0883E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24F2AFA0232CE68B00C0883E /* PBXTargetDependency */,
+			);
+			name = DarwinDigitalTests;
+			productName = DarwinDigitalTests;
+			productReference = 24F2AF9A232CE68B00C0883E /* DarwinDigitalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,6 +271,10 @@
 				TargetAttributes = {
 					24E6D3192328E7A200C513B2 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					24F2AF99232CE68B00C0883E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 24E6D3192328E7A200C513B2;
 					};
 				};
 			};
@@ -238,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				24E6D3192328E7A200C513B2 /* DarwinDigital */,
+				24F2AF99232CE68B00C0883E /* DarwinDigitalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +305,13 @@
 				24E6D33B2328F2C700C513B2 /* DarwinDigital.json in Resources */,
 				24E6D3282328E7A300C513B2 /* LaunchScreen.storyboard in Resources */,
 				24E6D3252328E7A300C513B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F2AF98232CE68B00C0883E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +342,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24F2AF96232CE68B00C0883E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F2AF9D232CE68B00C0883E /* DarwinDigitalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24F2AFA0232CE68B00C0883E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24E6D3192328E7A200C513B2 /* DarwinDigital */;
+			targetProxy = 24F2AF9F232CE68B00C0883E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		24E6D3262328E7A300C513B2 /* LaunchScreen.storyboard */ = {
@@ -444,6 +522,44 @@
 			};
 			name = Release;
 		};
+		24F2AFA1232CE68B00C0883E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarwinDigitalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MafiaCaffe.DarwinDigitalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarwinDigital.app/DarwinDigital";
+			};
+			name = Debug;
+		};
+		24F2AFA2232CE68B00C0883E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarwinDigitalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MafiaCaffe.DarwinDigitalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarwinDigital.app/DarwinDigital";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +577,15 @@
 			buildConfigurations = (
 				24E6D32D2328E7A300C513B2 /* Debug */,
 				24E6D32E2328E7A300C513B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24F2AFA3232CE68B00C0883E /* Build configuration list for PBXNativeTarget "DarwinDigitalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F2AFA1232CE68B00C0883E /* Debug */,
+				24F2AFA2232CE68B00C0883E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
