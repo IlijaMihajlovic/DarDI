@@ -17,7 +17,7 @@ final class MainTabBarController: UITabBarController {
     
     fileprivate func setupControllers() {
         tabBar.unselectedItemTintColor = .gray
-        tabBar.tintColor = .mainOrange
+        tabBar.tintColor = .mainAppOrange
         
         let homeController = HomeController.shared
         let homeNavigationController = UINavigationController(rootViewController: homeController)

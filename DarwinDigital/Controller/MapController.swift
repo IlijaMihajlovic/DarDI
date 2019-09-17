@@ -40,7 +40,7 @@ final class MapController: UIViewController {
                     DispatchQueue.main.async {
                         self.mapView.addAnnotation(pin)
                     }
-                    self.mapView.addAnnotation(pin)
+                    
                 })
                 
             case .failure(let err):

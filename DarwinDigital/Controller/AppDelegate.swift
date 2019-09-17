@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = mainTabBarVC
         
-        UINavigationBar.appearance().barTintColor = .mainOrange
+        UINavigationBar.appearance().barTintColor = .navBarColor
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         

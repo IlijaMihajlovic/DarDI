@@ -50,7 +50,7 @@ class DetailVC: UIViewController {
      //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainOrange
+        view.backgroundColor = .customGray
         addViewToSubView()
         addConstraints()
     }
@@ -72,7 +72,7 @@ class DetailVC: UIViewController {
         
         let attributedText = NSMutableAttributedString(string: currentCell.username.text ?? "", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
         
-        attributedText.append(NSAttributedString(string: "\nCity: \(currentCell.address.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\n\(currentCell.address.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
         attributedText.append(NSAttributedString(string: "\nStreet: \(currentCell.street.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         

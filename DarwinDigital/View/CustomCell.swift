@@ -14,7 +14,7 @@ final class CustomCell: UITableViewCell {
     let bubbleBackground: UIView = {
         let bubbleView = UIView()
         bubbleView.layer.cornerRadius = 16
-        bubbleView.backgroundColor =  .mainOrange
+        bubbleView.backgroundColor =  .mainAppOrange
         bubbleView.translatesAutoresizingMaskIntoConstraints = false
         return bubbleView
     }()
@@ -92,7 +92,7 @@ final class CustomCell: UITableViewCell {
     
      //MARK: - Constraints and Add Subview Functions
     fileprivate func addConstraints() {
-       bubbleBackground.anchor(top: topAnchor, bottom: bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 16, bottom: 16, right: 16))
+       bubbleBackground.anchor(top: topAnchor, bottom: bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 16, bottom: 12, right: 16))
         
         avatar.anchor(top: bubbleBackground.topAnchor, bottom: bubbleBackground.bottomAnchor, leading: bubbleBackground.leadingAnchor, trailing: nil, padding: .init(top: 5, left: 5, bottom: 5, right: 0), size: .init(width: 80, height: 0))
         
