@@ -12,7 +12,7 @@ extension MapController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view.annotation!.title as Any)
-        let detail = DetailVC()
+        let detail = DetailVC.shared
         //guard let annotation = view.annotation else { return }
         self.navigationController?.pushViewController(detail, animated: true)
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct JSONModelData: Decodable {
+struct UserJSONData: Decodable {
     let id: Int
     let name: String
     let username: String
@@ -41,4 +41,5 @@ struct Company: Decodable {
     let catchPhrase: String
     let bs: String
 }
+
 

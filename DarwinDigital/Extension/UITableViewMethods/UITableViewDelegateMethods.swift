@@ -8,12 +8,12 @@
 
 import UIKit
 
+//MARK: - UITableView Delegate Method
+
 extension HomeController {
     
-    //MARK: - UITableView Delegate Method
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = DetailVC()
+        let detailVC = DetailVC.shared
         detailVC.addAtrributedText(from: tableView, inviewController: detailVC)
  
         UIView.transition(with: tableView,duration:0.27,options:.transitionCrossDissolve,animations: { () -> Void in

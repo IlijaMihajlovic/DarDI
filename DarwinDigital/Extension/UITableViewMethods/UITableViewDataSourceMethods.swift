@@ -39,7 +39,7 @@ extension HomeController {
     
 
     //TODO: - Potential for using generics
-    func searchBarIsSeraching(with modelData: [JSONModelData], and cell: CustomCell, atIndexPath: IndexPath) {
+    func searchBarIsSeraching(with modelData: [UserJSONData], and cell: CustomCell, atIndexPath: IndexPath) {
         
         cell.address.text = modelData[atIndexPath.row].address.city
         cell.companyName.text = modelData[atIndexPath.row].company.name

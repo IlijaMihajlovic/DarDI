@@ -9,9 +9,9 @@
 import UIKit
 import MapKit
 
-class MapController: UIViewController {
+final class MapController: UIViewController {
     
-    var mapView: MKMapView!
+    fileprivate var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,9 @@ class MapController: UIViewController {
                 jsonData.forEach({ (data) in
                     //print("Success: \(data.address.geo.lat), \(data.address.geo.lng), \(data.address.city)")
                     
-                    let Latitude = Double(data.address.geo.lat)!
-                    let Longitude = Double(data.address.geo.lng)!
+                    guard let Latitude = Double(data.address.geo.lat) else { return }
+                    guard let Longitude = Double(data.address.geo.lng) else { return }
+                    
                     let location = CLLocationCoordinate2D(latitude: Latitude, longitude: Longitude)
                     let pin = JSONGeoModelData(title: data.username, coordinate: location, subtitle: data.address.city)
                     
@@ -48,7 +49,7 @@ class MapController: UIViewController {
         }
     }
     
-    func configureMapView() {
+   fileprivate func configureMapView() {
         mapView = MKMapView()
         mapView.showsUserLocation = true
         mapView.delegate = self

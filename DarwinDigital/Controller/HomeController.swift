@@ -9,24 +9,24 @@
 import UIKit
 
 class HomeController: UITableViewController {
-
-    //MARK: - Propeties
+    
     static let shared = HomeController()
+    
+    //MARK: - Propeties
     var isSearching = false
     let cellId = "cellId"
-    let url = "https://api.myjson.com/bins/w0b55"
+    let url = "https://api.myjson.com/bins/w0b55" /* NOTE TO DarwinDigital iOS Developers: I posted the raw JSON data you folks did send me to a HTTP based JSON storage endpoint to simulete parsing the JSON data from a REST API */
     
-    var incomingDataArray = [JSONModelData]()
-    var filterdArray = [JSONModelData]()
+    var incomingDataArray = [UserJSONData]()
+    var filterdArray = [UserJSONData]()
     
-    lazy var searchBar: UISearchBar = {
+    lazy fileprivate var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.sizeToFit()
         return searchBar
     }()
     
-    
-    lazy var sortBarButton: UIButton = {
+    lazy fileprivate var sortBarButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sort", for: .normal)
         button.addTarget(self, action: #selector(sortTableViewbyUsername), for: .touchUpInside)
@@ -44,23 +44,30 @@ class HomeController: UITableViewController {
         navigationItem.title = "Users"
   }
     
+    private init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    @objc func goToMapController() {
-        let showVC = MapController()
-        self.navigationController?.pushViewController(showVC, animated: true)
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    @objc fileprivate func goToMapController() {
+        let mapVC = MapController()
+        self.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     
     //MARK: - TableView
     fileprivate func setupTableView() {
-        //tableView.backgroundColor = .mainOrange
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.register(CustomCell.self, forCellReuseIdentifier: cellId)
     }
     
     //MARK: - Search Bar Button Function
-    @objc func handleShowSearchBar() {
+    @objc fileprivate func handleShowSearchBar() {
         showSearchBar(shouldShow: true)
         searchBar.becomeFirstResponder()
         searchBar.delegate = self
@@ -88,7 +95,7 @@ class HomeController: UITableViewController {
     }
     
     @objc fileprivate func sortTableViewbyUsername() {
-        incomingDataArray.sort { $0.username < $1.username } //sort username by ascending
+        incomingDataArray.sort { $0.username < $1.username } //sort username by ascending order
         tableView.reloadData()
     }
     

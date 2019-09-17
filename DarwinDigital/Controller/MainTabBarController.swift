@@ -8,19 +8,18 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+final class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControllers()
     }
     
-    
     fileprivate func setupControllers() {
         tabBar.unselectedItemTintColor = .gray
         tabBar.tintColor = .mainOrange
         
-        let homeController = HomeController()
+        let homeController = HomeController.shared
         let homeNavigationController = UINavigationController(rootViewController: homeController)
         homeNavigationController.tabBarItem.image = UIImage(named: "userList")?.withRenderingMode(.alwaysTemplate)
         homeNavigationController.tabBarItem.selectedImage = UIImage(named: "userList")?.withRenderingMode(.alwaysTemplate)

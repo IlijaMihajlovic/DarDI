@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+final class CustomCell: UITableViewCell {
     
     //MARK: - Propeties
     let bubbleBackground: UIView = {
@@ -85,14 +85,6 @@ class CustomCell: UITableViewCell {
         addViewToSubview()
         addConstraints()
     }
-    
-//    func getIndexPathFor(view: UIView, tableView: UITableView) -> IndexPath? {
-//
-//        let point = tableView.convert(view.bounds.origin, from: view)
-//        let indexPath = tableView.indexPathForRow(at: point)
-//        return indexPath
-//    }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
