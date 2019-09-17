@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243BAA5B232E7BBE00633AD3 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BAA5A232E7BBE00633AD3 /* PersistenceManager.swift */; };
 		24DA1E6A232C0365003A5EA6 /* JSONGeoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */; };
 		24DA1E6C232C34AE003A5EA6 /* MapControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */; };
 		24E6D31E2328E7A200C513B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6D31D2328E7A200C513B2 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		243BAA5A232E7BBE00633AD3 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		24DA1E69232C0365003A5EA6 /* JSONGeoModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONGeoModelData.swift; sourceTree = "<group>"; };
 		24DA1E6B232C34AE003A5EA6 /* MapControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapControllerExt.swift; sourceTree = "<group>"; };
 		24E6D31A2328E7A200C513B2 /* DarwinDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243BAA5C232E812400633AD3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				243BAA5A232E7BBE00633AD3 /* PersistenceManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		24E6D3112328E7A200C513B2 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 				24E6D3412329069300C513B2 /* Enum */,
 				24E6D33C2329066D00C513B2 /* Extension */,
 				24E6D3302328F06100C513B2 /* Controller */,
+				243BAA5C232E812400633AD3 /* Helper */,
 				24E6D3322328F08900C513B2 /* Supporting Files */,
 				24E6D3312328F07C00C513B2 /* Resources */,
 				24E6D3332328F0B100C513B2 /* Interface Builder */,
@@ -130,10 +141,10 @@
 		24E6D3302328F06100C513B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				24FC06BF232A361F00BA9C27 /* MainTabBarController.swift */,
 				24E6D31F2328E7A200C513B2 /* HomeController.swift */,
 				24FC06BD232A2F8900BA9C27 /* MapController.swift */,
 				24FC06C3232A66B000BA9C27 /* DetailVC.swift */,
-				24FC06BF232A361F00BA9C27 /* MainTabBarController.swift */,
 				24E6D31D2328E7A200C513B2 /* AppDelegate.swift */,
 			);
 			path = Controller;
@@ -331,6 +342,7 @@
 				24FC06C0232A361F00BA9C27 /* MainTabBarController.swift in Sources */,
 				24E6D3392328F15600C513B2 /* JSONModel.swift in Sources */,
 				24DA1E6A232C0365003A5EA6 /* JSONGeoModelData.swift in Sources */,
+				243BAA5B232E7BBE00633AD3 /* PersistenceManager.swift in Sources */,
 				24FC06C2232A4A5600BA9C27 /* CustomColor.swift in Sources */,
 				24E6D347232916E100C513B2 /* UITableViewDelegateMethods.swift in Sources */,
 				24E6D34B2329228C00C513B2 /* SetRadiusExt.swift in Sources */,

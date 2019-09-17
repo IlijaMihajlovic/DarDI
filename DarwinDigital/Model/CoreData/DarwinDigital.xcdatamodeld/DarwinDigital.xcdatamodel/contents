@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName="Address" parentEntity="JSONModelData" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
+    </entity>
+    <entity name="Company" representedClassName="Company" parentEntity="JSONModelData" syncable="YES" codeGenerationType="class">
+        <attribute name="bs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catchPhrase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Geo" representedClassName="Geo" parentEntity="JSONModelData" syncable="YES" codeGenerationType="class">
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="JSONModelData" representedClassName="JSONModelData" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="Transformable" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" attributeType="Transformable" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addressRelationship" maxCount="1" deletionRule="Nullify" destinationEntity="Address" syncable="YES"/>
+        <relationship name="companyRelationship" maxCount="1" deletionRule="Nullify" destinationEntity="Company" syncable="YES"/>
+        <relationship name="geoRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Address" positionX="163.03515625" positionY="-95.96484375" width="128" height="133"/>
+        <element name="Geo" positionX="-21" positionY="61.015625" width="128" height="73"/>
+        <element name="Company" positionX="-226" positionY="-33.99609375" width="128" height="88"/>
+        <element name="JSONModelData" positionX="-53.98828125" positionY="-403.00390625" width="128" height="223"/>
+    </elements>
+</model>

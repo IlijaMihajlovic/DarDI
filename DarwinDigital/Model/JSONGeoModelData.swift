@@ -24,3 +24,4 @@ class JSONGeoModelData: NSObject, MKAnnotation {
     }
     
 }
+

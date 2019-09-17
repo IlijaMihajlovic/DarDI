@@ -10,7 +10,6 @@ import UIKit
 
 class DetailVC: UIViewController {
     
-    //Singleton
     static let shared = DetailVC()
     
      //MARK: - Propeties
@@ -56,21 +55,30 @@ class DetailVC: UIViewController {
         addConstraints()
     }
     
+    private init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     //TODO: - Potential for using generics
     func addAtrributedText(from tableView: UITableView, inviewController: DetailVC, at indexPath: IndexPath? = nil) {
         
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         let currentCell = tableView.cellForRow(at: indexPath) as! CustomCell
         
-        let attributedText = NSMutableAttributedString(string: currentCell.username.text!, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
+        let attributedText = NSMutableAttributedString(string: currentCell.username.text ?? "", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
         
-        attributedText.append(NSAttributedString(string: "\nCity: \(currentCell.address.text!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\nCity: \(currentCell.address.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
-        attributedText.append(NSAttributedString(string: "\nStreet: \(currentCell.street.text!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\nStreet: \(currentCell.street.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
-        attributedText.append(NSAttributedString(string: "\nPhone: \(currentCell.phone.text!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\nPhone: \(currentCell.phone.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
-        attributedText.append(NSAttributedString(string: "\nEmail: \(currentCell.email.text!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\nEmail: \(currentCell.email.text ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
         inviewController.avatar.image = currentCell.avatar.image
         inviewController.descriptionTextView.attributedText = attributedText
