@@ -11,8 +11,8 @@ import MapKit
 
 final class MapController: UIViewController {
     
-    fileprivate var mapView: MKMapView!
-    
+     var mapView: MKMapView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Map"
@@ -21,6 +21,7 @@ final class MapController: UIViewController {
     }
     
     
+    //MARK: - Custom Functions
     fileprivate func checkJSONDataGeoDataForPossibleErrors() {
         guard let urlString = URL(string: HomeController.shared.url) else { return }
         
@@ -29,8 +30,7 @@ final class MapController: UIViewController {
             switch result {
             case .success(let jsonData):
                 jsonData.forEach({ (data) in
-                    //print("Success: \(data.address.geo.lat), \(data.address.geo.lng), \(data.address.city)")
-                    
+                  
                     guard let Latitude = Double(data.address.geo.lat) else { return }
                     guard let Longitude = Double(data.address.geo.lng) else { return }
                     
@@ -56,10 +56,10 @@ final class MapController: UIViewController {
         mapView.userTrackingMode = .follow
         view.addSubview(mapView)
         mapView.frame = view.frame
-    }
+    
 }
 
-
+}
 
 
 

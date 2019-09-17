@@ -22,7 +22,6 @@ extension HomeController {
         
         }, completion: nil)
         
-  
     }
 
 }
